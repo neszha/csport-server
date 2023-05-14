@@ -7,7 +7,6 @@ import { Server } from 'socket.io';
 import { createServer } from 'http';
 import './database/index.js';
 import events from './events.js';
-import socket from './socket/index.js';
 import apiRoutes from './api/index.js';
 
 const ROOT = process.cwd();
@@ -33,7 +32,3 @@ httpServer.listen(port, () => {
     console.log(`Server starting and listening on ${myIp}:${port}`);
     events.emit('server-ready');
 });
-
-/** Starting web socker server. */
-const io = new Server(httpServer, { path: '/ws' });
-socket.init(io);
