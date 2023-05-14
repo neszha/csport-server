@@ -1,0 +1,55 @@
+{
+  "name": "finaly-server",
+  "version": "1.0.0",
+  "description": "Server aplikasi finaly.",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "start": "npm run prod",
+    "prod": "npm run setup && node .",
+    "dev": "set NODE_ENV=development&&node .",
+    "dev-linux": "NODE_ENV=development&&node .",
+    "serve": "set NODE_ENV=development&&nodemon .",
+    "serve-linux": "NODE_ENV=development&&nodemon .",
+    "create-test-users": "node scripts/create-test-users.script.js",
+    "clear-test-users": "node scripts/clear-test-users.script.js"
+  },
+  "heroku-run-build-script": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neszha/myexams-toefl.git"
+  },
+  "author": "Fanesa Hadi Pramana",
+  "license": "ISC",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/neszha/myexams-toefl/issues"
+  },
+  "homepage": "https://github.com/neszha/myexams-toefl#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "events": "^3.3.0",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "file-system": "^2.2.2",
+    "form-data": "^4.0.0",
+    "geolib": "^3.3.3",
+    "ip": "^1.1.8",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.0",
+    "morgan": "^1.10.0",
+    "randomstring": "^1.2.3",
+    "socket.io": "^4.5.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2"
+  }
+}
