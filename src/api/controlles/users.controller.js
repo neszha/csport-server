@@ -13,6 +13,12 @@ export default {
         return res.json({ data: req.user });
     },
 
+    async getUsers(req, res) {
+        const users = await UserModel.find({}, { password: 0 }).lean();
+        users.sort((a, b) => a.distance - b.distance);
+        return res.json({ data: users });
+    },
+
     /**
      * Method: POST
      */
@@ -60,6 +66,21 @@ export default {
         return res.cookie('token', token)
             .json({ msg: 'Login berhasil.', token });
     },
+
+    async updatePosition(req, res) {
+        const userId = req.payload.id;
+        const { time, distance } = req.body;
+
+        // Validate body.
+        if (!time || !distance) return badRequest(res);
+
+        // Update ke database.
+        await UserModel.updateOne({ _id: userId }, { time, distance }).exec();
+
+        // Send response.
+        return res.json({ success: true });
+    },
+
     /**
      * Method: PUT
      */

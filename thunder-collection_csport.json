@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "csport",
-    "dateExported": "2023-05-14T09:32:06.973Z",
+    "dateExported": "2023-05-14T10:39:59.576Z",
     "version": "1.1",
     "folders": [
         {
@@ -68,6 +68,39 @@
             "tests": []
         },
         {
+            "_id": "d5492802-8fb8-4ae6-a95f-61189d1dda20",
+            "colId": "5b003d8b-e741-44f4-907c-56b5cefb0c33",
+            "containerId": "9775718a-e995-430a-bd38-a1c7f347a003",
+            "name": "/ (get users)",
+            "url": "{{BASE_URL}}/api/users",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-05-14T10:29:51.789Z",
+            "modified": "2023-05-14T10:30:24.165Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2594a0cc-6cc0-4795-b110-8f420bdb76bb",
+            "colId": "5b003d8b-e741-44f4-907c-56b5cefb0c33",
+            "containerId": "5d0c5c9d-10a9-4819-9892-22af0e6bd19c",
+            "name": "/location (update location)",
+            "url": "{{BASE_URL}}/api/me/location",
+            "method": "PUT",
+            "sortNum": 12500,
+            "created": "2023-05-14T10:35:20.120Z",
+            "modified": "2023-05-14T10:36:13.528Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"time\": 12312,\n  \"distance\": 123123\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
             "_id": "442dd230-55e2-444d-ab30-e7911ab573a5",
             "colId": "5b003d8b-e741-44f4-907c-56b5cefb0c33",
             "containerId": "b4badcc6-656b-4574-acea-0d0916c98445",
@@ -85,36 +118,17 @@
             "_id": "9344ffef-2b0d-4307-89c6-a7cc1f407fd1",
             "colId": "5b003d8b-e741-44f4-907c-56b5cefb0c33",
             "containerId": "9775718a-e995-430a-bd38-a1c7f347a003",
-            "name": "/ (Register)",
+            "name": "/ (register)",
             "url": "{{BASE_URL}}/api/users",
             "method": "POST",
             "sortNum": 20000,
             "created": "2023-05-14T09:15:31.268Z",
-            "modified": "2023-05-14T09:22:37.947Z",
+            "modified": "2023-05-14T10:33:07.503Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"Name\",\n  \"username\": \"user\",\n  \"password\": \"user\",\n  \"age\": 20,\n  \"height\": 180,\n  \"weight\": 50\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "966bfe6f-65d6-4260-852c-db18ffdc3dcd",
-            "colId": "5b003d8b-e741-44f4-907c-56b5cefb0c33",
-            "containerId": "5d0c5c9d-10a9-4819-9892-22af0e6bd19c",
-            "name": "/bio (update my status or bio)",
-            "url": "{{BASE_URL}}/api/me/bio",
-            "method": "PATCH",
-            "sortNum": 20000,
-            "created": "2023-05-14T09:29:24.142Z",
-            "modified": "2023-05-14T09:29:24.140Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"name\": \"Edited\",\n  \"gender\": \"man\",\n  \"description\": \"No life\"\n}",
+                "raw": "{\n  \"name\": \"Name\",\n  \"username\": \"user2\",\n  \"password\": \"user\",\n  \"age\": 20,\n  \"height\": 180,\n  \"weight\": 50\n}",
                 "form": []
             },
             "tests": []

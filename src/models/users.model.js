@@ -22,6 +22,12 @@ const schema = new Schema({
     weight: {
         type: Number, required: true,
     },
+    time: {
+        type: Number, default: 0,
+    },
+    distance: {
+        type: Number, default: 0,
+    },
 }, {
     timestamps: true,
     versionKey: false,
