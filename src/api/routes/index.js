@@ -27,14 +27,13 @@ api.delete('/auth/logout', usersController.logout);
  * Me resources.
  */
 api.get('/me', authMiddleware.asUser, usersController.getSession);
-api.post('/me/picture', authMiddleware.asUser, usersController.updatePicture);
-api.patch('/me/bio', authMiddleware.asUser, usersController.updateBio);
-api.patch('/me/locations', authMiddleware.asUser, usersController.updateLocations);
+// api.patch('/me/bio', authMiddleware.asUser, usersController.updateBio);
+// api.patch('/me/locations', authMiddleware.asUser, usersController.updateLocations);
 
 /**
  * Users resources.
  */
-api.post('/users/register', usersController.register);
+api.post('/users', usersController.register); // Register
 
 /** Route 404 */
 api.use((req, res) => {

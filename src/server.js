@@ -3,7 +3,6 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
 import process from 'process';
-import { Server } from 'socket.io';
 import { createServer } from 'http';
 import './database/index.js';
 import events from './events.js';

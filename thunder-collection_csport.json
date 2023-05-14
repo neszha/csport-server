@@ -1,0 +1,123 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "csport",
+    "dateExported": "2023-05-14T09:32:06.973Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "9f9f86ae-023b-459f-839f-85b8d63dd6d2",
+            "name": "/api",
+            "containerId": "",
+            "created": "2023-05-14T09:11:12.852Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "b4badcc6-656b-4574-acea-0d0916c98445",
+            "name": "/auth",
+            "containerId": "9f9f86ae-023b-459f-839f-85b8d63dd6d2",
+            "created": "2023-05-14T09:11:43.201Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "9775718a-e995-430a-bd38-a1c7f347a003",
+            "name": "/users",
+            "containerId": "9f9f86ae-023b-459f-839f-85b8d63dd6d2",
+            "created": "2023-05-14T09:15:24.152Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "5d0c5c9d-10a9-4819-9892-22af0e6bd19c",
+            "name": "/me (need login)",
+            "containerId": "9f9f86ae-023b-459f-839f-85b8d63dd6d2",
+            "created": "2023-05-14T09:29:24.140Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "e213706c-be6f-4140-8bfe-c4c664366976",
+            "colId": "5b003d8b-e741-44f4-907c-56b5cefb0c33",
+            "containerId": "5d0c5c9d-10a9-4819-9892-22af0e6bd19c",
+            "name": "/ (get my info)",
+            "url": "{{BASE_URL}}/api/me",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2023-05-14T09:29:24.140Z",
+            "modified": "2023-05-14T09:29:24.140Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b9bd0b18-16dd-4f45-ac4c-f0cd60d694f4",
+            "colId": "5b003d8b-e741-44f4-907c-56b5cefb0c33",
+            "containerId": "b4badcc6-656b-4574-acea-0d0916c98445",
+            "name": "/login",
+            "url": "{{BASE_URL}}/api/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-05-14T09:11:48.205Z",
+            "modified": "2023-05-14T09:31:25.544Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"user\",\n  \"password\": \"user\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "442dd230-55e2-444d-ab30-e7911ab573a5",
+            "colId": "5b003d8b-e741-44f4-907c-56b5cefb0c33",
+            "containerId": "b4badcc6-656b-4574-acea-0d0916c98445",
+            "name": "/logout",
+            "url": "{{BASE_URL}}/api/auth/logout",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2023-05-14T09:12:08.203Z",
+            "modified": "2023-05-14T09:27:42.420Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9344ffef-2b0d-4307-89c6-a7cc1f407fd1",
+            "colId": "5b003d8b-e741-44f4-907c-56b5cefb0c33",
+            "containerId": "9775718a-e995-430a-bd38-a1c7f347a003",
+            "name": "/ (Register)",
+            "url": "{{BASE_URL}}/api/users",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-05-14T09:15:31.268Z",
+            "modified": "2023-05-14T09:22:37.947Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Name\",\n  \"username\": \"user\",\n  \"password\": \"user\",\n  \"age\": 20,\n  \"height\": 180,\n  \"weight\": 50\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "966bfe6f-65d6-4260-852c-db18ffdc3dcd",
+            "colId": "5b003d8b-e741-44f4-907c-56b5cefb0c33",
+            "containerId": "5d0c5c9d-10a9-4819-9892-22af0e6bd19c",
+            "name": "/bio (update my status or bio)",
+            "url": "{{BASE_URL}}/api/me/bio",
+            "method": "PATCH",
+            "sortNum": 20000,
+            "created": "2023-05-14T09:29:24.142Z",
+            "modified": "2023-05-14T09:29:24.140Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Edited\",\n  \"gender\": \"man\",\n  \"description\": \"No life\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

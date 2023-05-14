@@ -21,15 +21,12 @@
     "dotenv": "^16.0.3",
     "events": "^3.3.0",
     "express": "^4.18.2",
-    "file-system": "^2.2.2",
     "form-data": "^4.0.0",
-    "geolib": "^3.3.3",
     "ip": "^1.1.8",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.7.0",
     "morgan": "^1.10.0",
-    "randomstring": "^1.2.3",
-    "socket.io": "^4.5.4"
+    "randomstring": "^1.2.3"
   },
   "devDependencies": {
     "eslint": "^7.32.0 || ^8.2.0",
